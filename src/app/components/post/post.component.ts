@@ -9,5 +9,5 @@ import {IPost} from "../../interfaces";
   styleUrl: './post.component.css'
 })
 export class PostComponent {
-@Input() onePost : IPost
+  @Input() onePost: IPost
 }

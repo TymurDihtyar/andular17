@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../../services/user.service";
-import {IPost, IUser} from "../../interfaces";
-import {UserComponent} from "../user/user.component";
 import {NgForOf} from "@angular/common";
+
+import {IPost, IUser} from "../../interfaces";
+import {UserService} from "../../services";
+import {UserComponent} from "../user/user.component";
 import {PostsComponent} from "../posts/posts.component";
 
 @Component({

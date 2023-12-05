@@ -1,7 +1,8 @@
 import {Component, Input} from '@angular/core';
+import {NgForOf} from "@angular/common";
+
 import {IPost} from "../../interfaces";
 import {PostComponent} from "../post/post.component";
-import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-posts',
@@ -14,5 +15,5 @@ import {NgForOf} from "@angular/common";
   styleUrl: './posts.component.css'
 })
 export class PostsComponent {
-@Input() userPosts: IPost[]
+  @Input() userPosts: IPost[]
 }

@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+
 import {Observable} from "rxjs";
 import {IPost, IUser} from "../interfaces";
-import {urls} from "../constants/urls";
+import {urls} from "../constants";
 
 @Injectable({
   providedIn: 'root'
