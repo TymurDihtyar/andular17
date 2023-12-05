@@ -17,6 +17,7 @@ import {PostsComponent} from "../posts/posts.component";
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })
+
 export class UsersComponent implements OnInit{
   users:IUser[]
   userPosts: IPost[]
