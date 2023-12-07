@@ -10,12 +10,15 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-@Input() user:IUser
+  @Input() user: IUser
 
-  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
-  toDeteils():void {
-  this.router.navigate([this.user.id], {relativeTo: this.activatedRoute})
+  toDetails(): void {
+    this.router.navigate([this.user.id], {
+      relativeTo: this.activatedRoute,
+      state: this.user
+    })
   }
 }
