@@ -1,0 +1,10 @@
+<div *ngIf="user" class="user">
+  <div>ID: {{user.id}}</div>
+  <div>NAME: {{user.name}}</div>
+  <div>USERNAME: {{user.username}}</div>
+  <div>EMAIL: {{user.email}}</div>
+  <div>PHONE: {{user.phone}}</div>
+</div>
+<div >
+  <button (click)="getPosts()" class="butt">post of current user</button>
+</div>

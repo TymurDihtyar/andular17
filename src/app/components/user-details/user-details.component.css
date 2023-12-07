@@ -1,0 +1,17 @@
+.user {
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: #e0a077;
+  padding: 30px;
+  font-size: 30px;
+}
+.butt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}

@@ -1,0 +1,21 @@
+.one {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #e35b23;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+button {
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+}

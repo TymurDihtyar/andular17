@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {UserPostsComponent} from "../../components/user-posts/user-posts.component";
 import {NgIf} from "@angular/common";
 
@@ -13,5 +13,5 @@ import {NgIf} from "@angular/common";
   styleUrl: './posts-page.component.css'
 })
 export class PostsPageComponent {
-@Input() userId : number
+
 }
