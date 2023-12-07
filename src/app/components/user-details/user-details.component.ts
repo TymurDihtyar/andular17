@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {IUser} from "../../interfaces/user.interface";
 import {NgIf} from "@angular/common";
-import {UsersService} from "../../services/users.service";
-import {IPost} from "../../interfaces/post.interface";
-import {PostsService} from "../../services/posts.service";
+import {ActivatedRoute, Router} from "@angular/router";
+
+import {IUser, IPost} from "../../interfaces";
+import {UsersService, PostsService} from "../../services";
+
 
 @Component({
   selector: 'app-user-details',

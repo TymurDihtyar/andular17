@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterOutlet} from "@angular/router";
+
 import {UserDetailsComponent} from "../../components/user-details/user-details.component";
 
 @Component({

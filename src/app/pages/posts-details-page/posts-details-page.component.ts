@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {UserPostDetailsComponent} from "../../components/user-post-details/user-post-details.component";
 
 @Component({

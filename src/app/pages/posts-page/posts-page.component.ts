@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
-import {UserPostsComponent} from "../../components/user-posts/user-posts.component";
 import {NgIf} from "@angular/common";
+
+import {UserPostsComponent} from "../../components/user-posts/user-posts.component";
 
 @Component({
   selector: 'app-posts-page',

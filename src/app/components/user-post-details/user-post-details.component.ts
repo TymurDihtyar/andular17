@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {IPost} from "../../interfaces/post.interface";
 import {NgForOf, NgIf} from "@angular/common";
-import {IComment} from "../../interfaces/comment.interface";
-import {CommentsService} from "../../services/comments.service";
+
+import {IPost, IComment} from "../../interfaces";
+import {CommentsService} from "../../services";
 import {CommentComponent} from "../comment/comment.component";
 
 @Component({
