@@ -6,9 +6,12 @@ const posts = `${baseURL}/posts`
 const urls = {
   users: {
     base: users,
-    byId: (id:number):string => `${users}/${id}`
+    byId: (id: number): string => `${users}/${id}`
   },
   posts: {
     base: posts,
+    userPostsById: (id: number): string => `${users}/${id}/posts`
   }
 }
+
+export {urls}
