@@ -12,10 +12,10 @@ export const routes: Routes = [
   path: '', component:MainLayoutComponent, children:[
       {path: '', redirectTo:'users', pathMatch:'full'},
       {path:'users', component:UsersPageComponent},
-      {path:'user/detail', component: UserDetailsPageComponent, children:[
+      {path:'users/:id', component: UserDetailsPageComponent, children:[
           {path: 'posts',component:PostsPageComponent}
         ]},
-      {path: 'posts/detail', component:PostsDetailsPageComponent, children:[
+      {path: 'posts/details', component:PostsDetailsPageComponent, children:[
           {path: 'comments', component: CommentsPageComponent}
         ]}
     ]
