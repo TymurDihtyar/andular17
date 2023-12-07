@@ -17,8 +17,7 @@ export class UserPostComponent {
     }
 
     toPostDetails() {
-        this.router.navigate(['/posts/details'], {
-            relativeTo: this.activatedRoute,
+        this.router.navigate(['posts', this.userPost.id,'details'], {
             state: this.userPost
         })
     }

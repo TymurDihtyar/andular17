@@ -4,6 +4,7 @@ import {NgForOf, NgIf} from "@angular/common";
 
 import {IPost} from "../../interfaces";
 import {UserPostComponent} from "../user-post/user-post.component";
+import {PostsService} from "../../services";
 
 @Component({
     selector: 'app-user-posts',
@@ -19,7 +20,10 @@ import {UserPostComponent} from "../user-post/user-post.component";
 export class UserPostsComponent {
     userPosts: IPost[]
 
-    constructor(private router: Router, private activatedRoute: ActivatedRoute,) {
-        this.userPosts = this.router.getCurrentNavigation()?.extras.state as IPost[]
+    constructor(private router: Router, private activatedRoute: ActivatedRoute, private  postsService:PostsService) {
+        this.activatedRoute.parent?.params.subscribe(({id}) => {
+            this.userPosts = this.router.getCurrentNavigation()?.extras.state as IPost[]
+            this.postsService.byUserId(id).subscribe(value => this.userPosts = value)
+        })
     }
 }

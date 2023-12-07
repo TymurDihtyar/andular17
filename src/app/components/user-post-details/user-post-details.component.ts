@@ -3,7 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {NgForOf, NgIf} from "@angular/common";
 
 import {IPost, IComment} from "../../interfaces";
-import {CommentsService} from "../../services";
+import {CommentsService, PostsService} from "../../services";
 import {CommentComponent} from "../comment/comment.component";
 
 @Component({
@@ -21,10 +21,16 @@ export class UserPostDetailsComponent {
   userPost:IPost
   comments: IComment[]
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private  commentsService:CommentsService) {
-    this.activatedRoute.params.subscribe(value => {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private postsService:PostsService, private  commentsService:CommentsService) {
+    this.activatedRoute.params.subscribe(({postId}) => {
       this.userPost = this.router.getCurrentNavigation()?.extras.state as IPost;
+
+      if (!this.userPost) {
+        this.postsService.byId(postId).subscribe(value => this.userPost = value)
+      }
+
+      this.commentsService.byPostId(postId).subscribe(value => this.comments = value)
+
     })
-    this.commentsService.byPostId(this.userPost.id).subscribe(value => this.comments = value)
   }
 }

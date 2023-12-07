@@ -14,7 +14,7 @@ export const routes: Routes = [
       {path:'users/:id', component: UserDetailsPageComponent, children:[
           {path: 'posts',component:PostsPageComponent}
         ]},
-      {path: 'posts/details', component:PostsDetailsPageComponent}
+      {path: 'posts/:postId/details', component:PostsDetailsPageComponent}
     ]
   }
 ];
